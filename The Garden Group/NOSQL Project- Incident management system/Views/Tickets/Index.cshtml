@@ -1,0 +1,31 @@
+﻿@model IEnumerable<NOSQL_Project__Incident_management_system.Models.Ticket>
+
+<h2>Tickets</h2>
+<a href="/Tickets/Create">Create New Ticket</a>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Subject</td>
+                <td>@ticket.Description</td>
+                <td>@ticket.Priority</td>
+                <td>@ticket.Status</td>
+                <td>
+                    <a href="/Tickets/Edit/@ticket.Id">Edit</a> |
+                    <a href="/Tickets/Delete/@ticket.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

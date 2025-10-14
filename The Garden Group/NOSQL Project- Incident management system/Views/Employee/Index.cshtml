@@ -1,0 +1,24 @@
+﻿<thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Role</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@employee.Name</td>
+            <td>@employee.Email</td>
+            <td>@employee.Department</td>
+            <td>@employee.Role</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-action="Delete" asp-route-id="@employee.Id" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>

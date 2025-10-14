@@ -1,0 +1,29 @@
+﻿@model NOSQL_Project__Incident_management_system.Models.Ticket
+
+<h2>Create Ticket</h2>
+
+<form asp-action="Create" method="post">
+    <label>Subject:</label><br />
+    <input asp-for="Subject" /><br />
+
+    <label>Description:</label><br />
+    <textarea asp-for="Description"></textarea><br />
+
+    <label>Priority:</label><br />
+    <select asp-for="Priority">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>Urgent</option>
+    </select><br />
+
+    <label>Status:</label><br />
+    <select asp-for="Status">
+        <option>Open</option>
+        <option>InProgress</option>
+        <option>Resolved</option>
+        <option>Closed</option>
+    </select><br />
+
+    <button type="submit">Save</button>
+</form>
