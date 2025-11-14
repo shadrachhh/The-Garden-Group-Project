@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NOSQL Project- Incident management system")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a39bd0dc0223286aedb4193fefb6f39cc4c5e25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65f9f0c136bcc8352833b100e84603a0f190a5cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("NOSQL Project- Incident management system")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NOSQL Project- Incident management system")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

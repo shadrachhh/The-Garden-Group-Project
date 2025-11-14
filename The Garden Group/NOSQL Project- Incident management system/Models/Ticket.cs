@@ -14,6 +14,10 @@ namespace NOSQL_Project__Incident_management_system.Models
         [BsonElement("employeeId")]
         public string EmployeeId { get; set; }
 
+        [BsonElement("assignedTo")]
+        public string? AssignedTo { get; set; } // who handles this ticket (IT/service desk)
+
+
 
         [BsonElement("subject")]
         public string Subject { get; set; }

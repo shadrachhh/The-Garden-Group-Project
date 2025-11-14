@@ -37,5 +37,13 @@ namespace NOSQL_Project__Incident_management_system.Repositories
         {
             await _context.Employees.DeleteOneAsync(e => e.Id == id);
         }
+
+        public async Task<Employee> GetByEmailAsync(string email)
+        {
+            return await _context.Employees
+                .Find(e => e.Email == email)
+                .FirstOrDefaultAsync();
+        }
+
     }
 }

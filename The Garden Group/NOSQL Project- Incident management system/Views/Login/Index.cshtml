@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form asp-action="Index" method="post">
+    <label>Email</label>
+    <input type="email" name="email" required />
+    <button type="submit">Login</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <p style="color:red">@ViewData.ModelState.Values.SelectMany(v => v.Errors).FirstOrDefault()?.ErrorMessage</p>
+}

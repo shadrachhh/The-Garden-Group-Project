@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NOSQL_Project__Incident_management_system.Models
 {
+    [BsonIgnoreExtraElements]  
     public class Employee
     {
         [BsonId]
@@ -19,6 +20,6 @@ namespace NOSQL_Project__Incident_management_system.Models
         public string Department { get; set; }
 
         [BsonElement("role")]
-        public string Role { get; set; } // "employee" or "servicedesk"
+        public string Role { get; set; } 
     }
 }

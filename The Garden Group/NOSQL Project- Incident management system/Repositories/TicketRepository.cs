@@ -29,5 +29,39 @@ namespace NOSQL_Project__Incident_management_system.Repositories
 
         public async Task DeleteAsync(string id) =>
             await _context.Tickets.DeleteOneAsync(t => t.Id == id);
+
+
+        public async Task<List<Ticket>> GetByEmployeeIdAsync(string employeeId)
+        {
+            return await _context.Tickets
+                .Find(t => t.EmployeeId == employeeId)
+                .ToListAsync();
+
+        }
+
+        public async Task<List<Ticket>> GetAllForDashboardAsync()
+        {
+            return await _context.Tickets.Find(_ => true).ToListAsync();
+        }
+
+
+        public async Task<List<Ticket>> GetActiveAsync()
+        {
+            return await _context.Tickets
+                .Find(t => t.Status == TicketStatus.Open || t.Status == TicketStatus.InProgress)
+                .ToListAsync();
+        }
+
+        public async Task<List<Ticket>> GetActiveByEmployeeIdAsync(string employeeId)
+        {
+            return await _context.Tickets
+                .Find(t => t.EmployeeId == employeeId &&
+                           (t.Status == TicketStatus.Open || t.Status == TicketStatus.InProgress))
+                .ToListAsync();
+        }
+
+
+
     }
+
 }

@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Ticket Dashboard</h2>
+
+<div>
+    <p><strong>Total Tickets:</strong> @Model.Total</p>
+
+    <ul>
+        <li><strong>Open:</strong> @Model.OpenPercent %</li>
+        <li><strong>Resolved:</strong> @Model.ResolvedPercent %</li>
+        <li><strong>Closed (No Resolve):</strong> @Model.ClosedNoResolvePercent %</li>
+    </ul>
+</div>
+
+<a asp-controller="Tickets" asp-action="Index" class="btn btn-primary">Back to Tickets</a>
